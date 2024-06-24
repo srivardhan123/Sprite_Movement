@@ -37,7 +37,7 @@ const ThinkWithTimer = ({ character, comp_id, addAction }) => {
       payload: {
         characterId: character.active,
         timestamp: new Date().toISOString(),
-        message: "The sprite is thinking on " + state.message + " for " + state.timer_for_msg + " secs ",
+        message: "The sprite is thinking on " + state.timer_message + " for " + state.timer_for_msg + " secs ",
         property: {
           displayMsg: el.style.display,
           innerHTML: el.innerHTML,

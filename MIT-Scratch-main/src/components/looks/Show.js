@@ -15,7 +15,7 @@ const Show = ({ character, comp_id, addAction }) => {
         timestamp: new Date().toISOString(),
         message: "The sprite is in visible mode...",
         property: {
-          display: el.style.display,
+          displayCat: el.style.display,
         }
       },
     });

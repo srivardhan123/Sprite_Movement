@@ -28,13 +28,14 @@ const ActionReplay = ({ character,actionLog, addAction }) => {
         el1.style.display = action.payload.property.displayMsg;
         el1.innerHTML = action.payload.property.innerHTML;
         el2.style.display = action.payload.property.display1;
+        element1.style.display = action.payload.property.displayCat;
   };
   return (
     <div className="my-3">
       <div
       className={`text-center rounded bg-blue-700 text-white p-2 my-2 text-sm cursor-pointer mx-auto`}
       >
-      Replay Action Number {" "}
+      Enter Action Number (0..N) {" "}
       <input
         type="number"
         className="text-black text-center w-16 mx-2"
