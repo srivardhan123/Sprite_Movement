@@ -14,6 +14,9 @@ const Hide = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The sprite is in hide mode...",
+        property: {
+          display: el.style.display,
+        }
       },
     });
   };

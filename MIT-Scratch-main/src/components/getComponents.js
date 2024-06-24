@@ -23,7 +23,6 @@ import LayerEffect from "./looks/LayerEffect";
 import Go_forward_by_10layers from "./looks/Go_forward_by_10layers";
 import ShowPositions from "./motion/ShowPositions"
 import ChangeColorEffect from "./looks/ChangeColorEffect";
-import CleargraphicContent from "./looks/CleargraphicContent";
 import ChangeSize from "./looks/ChangeSize";
 import GoToRandomPosition from "./motion/GoToRandomPosition";
 import PointRandomDirection from "./motion/PointRandomDirection";
@@ -106,8 +105,6 @@ export const getComponent = (key, id) => {
     case "SHOWPOSITION":
       return <ShowPositions comp_id = {id} />;
 
-    case "GRAPHIC":
-      return <CleargraphicContent comp_id = {id} />
 
     case "Go_TO_RANDOM":
       return <GoToRandomPosition comp_id = {id} />

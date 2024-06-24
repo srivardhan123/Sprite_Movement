@@ -21,10 +21,8 @@ const SayMessageWithTimer = ({ character, comp_id, addAction }) => {
       return;
     }
     setState({ ...state, show_msg: true });
-
     el.style.display = "block";
     el.style.position = "relative";
-
     el.innerHTML = state.timer_message;
     window.setTimeout(() => {
       setState({ ...state, show_msg: false });
@@ -36,6 +34,10 @@ const SayMessageWithTimer = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The message has " + state.timer_message + " displayed for " + state.timer_for_msg + " sec",
+        property: {
+          displayMsg: el.style.display,
+          innerHTML: el.innerHTML,
+        }
       },
     });
   };

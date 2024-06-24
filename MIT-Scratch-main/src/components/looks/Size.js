@@ -17,6 +17,11 @@ const Size = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The sprite size set " + state.scale + "%",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+        }
       },
     });
   };

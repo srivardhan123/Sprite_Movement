@@ -24,6 +24,9 @@ const LayerEffect = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Set Layer to " + selectedLayer ,
+        property: {
+          zIndex: el.style.zIndex,
+        }
       },
     });
   };

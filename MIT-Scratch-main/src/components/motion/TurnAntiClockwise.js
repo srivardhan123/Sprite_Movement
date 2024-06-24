@@ -25,6 +25,11 @@ const TurnAntiClockWise = ({ character, characterAngle, comp_id,addAction }) => 
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "I have turned in anti-clockwise by "+ angle + "\u00B0",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+        },
       },
     });
   };

@@ -25,6 +25,10 @@ const ChangeY = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Y is changed by " + state.change_y,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
     

@@ -1,9 +1,6 @@
-// components/ActionReplay.js
-
 import React ,{useState} from 'react';
 import { connect } from 'react-redux';
 import { addAction } from '../redux/addAction/actionH';
-import { styled } from '@material-ui/core';
 
 const ActionReplay = ({ character,actionLog, addAction }) => {
   
@@ -11,13 +8,27 @@ const ActionReplay = ({ character,actionLog, addAction }) => {
       action_no:0,
   });
 
-  const handleReplay = () => {
+  const handleReplay = () => 
+  {
         const action = actionLog[state.action_no];
+        const element = document.getElementById(`${character.active}-div`);
+        const element1 = document.getElementById(character.active);
+        const el1 = document.getElementById(`${character.active}-message-box`);
+        const el2 = document.getElementById(`${character.active}-message-box1`);
+        console.log(action);
         setTimeout(() => {
-          addAction(action); // Dispatch action
-        }, 1); // Delay between actions (adjust as needed)
+          addAction(action);
+        }, 1);
+        element.style.left = action.payload.property.left ;
+        element.style.top = action.payload.property.top;
+        element.style.transform = action.payload.property.transform;
+        element.style.display = action.payload.property.display;
+        element.style.filter = action.payload.property.filter;
+        element.style.zIndex = action.payload.property.zIndex;
+        el1.style.display = action.payload.property.displayMsg;
+        el1.innerHTML = action.payload.property.innerHTML;
+        el2.style.display = action.payload.property.display1;
   };
-
   return (
     <div className="my-3">
       <div

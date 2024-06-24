@@ -33,6 +33,10 @@ const SayMessage = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The message is " + state.message,
+        property: {
+          displayMsg: el.style.display,
+          innerHTML: el.innerHTML,
+        }
       },
     });
   };

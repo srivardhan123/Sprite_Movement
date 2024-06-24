@@ -33,6 +33,13 @@ const ShowPositions = ({ character, comp_id, addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "My X position is  "+ topNumber,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+          innerHTML: el1.innerHTML,
+          display: el1.style.display,
+        }
       },
     });
     window.clearTimeout();
@@ -60,6 +67,13 @@ const ShowPositions = ({ character, comp_id, addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "My Y position is  "+ topNumber,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+          innerHTML: el2.innerHTML,
+          display: el2.style.display,
+        }
       },
     });
     window.clearTimeout();
@@ -92,6 +106,13 @@ const ShowPositions = ({ character, comp_id, addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "My Direction is  "+ degree + "\u00B0",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+          innerHTML: el3.innerHTML,
+          display: el3.style.display,
+        }
       },
     });
     window.clearTimeout();

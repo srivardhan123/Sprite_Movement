@@ -14,10 +14,12 @@ const Show = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The sprite is in visible mode...",
+        property: {
+          display: el.style.display,
+        }
       },
     });
   };
-
   return (
     <Paper elevation={3}>
       <div

@@ -19,6 +19,10 @@ const SetY = ({ character, comp_id,addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "New Y position is set to "+ state.goto_y,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };

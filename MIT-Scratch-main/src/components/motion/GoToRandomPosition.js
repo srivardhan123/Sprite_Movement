@@ -24,6 +24,10 @@ const GoToRandomPosition = ({ character, comp_id,addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(), 
         message: "X, Y position is " + mouseX + " and " + mouseY,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };
@@ -47,6 +51,10 @@ const GoToRandomPosition = ({ character, comp_id,addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(), 
         message: "X, Y position is " + randomX + " and " + randomY,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };

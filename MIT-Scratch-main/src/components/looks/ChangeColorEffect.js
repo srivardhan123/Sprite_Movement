@@ -62,6 +62,9 @@ const ColorEffect = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Here the change effect has performed! ",
+        property: {
+          filter: el.style.filter,
+        }
       },
     });
   };

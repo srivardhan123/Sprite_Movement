@@ -20,6 +20,10 @@ const Move = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Sprite moved " + steps + " steps in Horizental Direction",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };

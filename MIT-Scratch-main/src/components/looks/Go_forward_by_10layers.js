@@ -28,6 +28,9 @@ const LayerEffect = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The layers are moved by  " + layerOffset,
+        property: {
+          zIndex:el.style.zIndex ,
+        }
       },
     });
   };

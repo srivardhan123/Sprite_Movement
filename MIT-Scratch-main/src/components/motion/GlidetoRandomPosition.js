@@ -33,6 +33,11 @@ const GlidetoRandomPosition = ({ character, comp_id,addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Glide Time is " + state.glide_time + " X, Y Position is " + randomX + " and " + randomY,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+        }
       },
     });
   };

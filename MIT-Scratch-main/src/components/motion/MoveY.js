@@ -21,6 +21,10 @@ const MoveY = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "Sprite moved " + steps + " steps in vertical direction.",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };

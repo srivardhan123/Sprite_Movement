@@ -34,6 +34,11 @@ const ThinkMessage = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The sprite is thinking on " + state.message,
+        property: {
+          displayMsg: el.style.display,
+          display1:el2.style.display,
+          innerHTML: el.innerHTML,
+        }
       },
     });
   };

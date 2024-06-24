@@ -13,12 +13,17 @@ const SetX = ({ character, comp_id, addAction}) => {
     const el = document.getElementById(`${character.active}-div`);
     el.style.position = "relative";
     el.style.left = state.goto_x + "px";
+
     addAction({
       type: 'SET_X',
       payload: {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "New X position is set to "+ state.goto_x,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
   };

@@ -23,6 +23,11 @@ const PointDirection = ({ character, characterAngle, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "My point direction is " + angle + " degrees.",
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+        },
       },
     });
   };

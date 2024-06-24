@@ -19,28 +19,35 @@ const PointDirection = ({ character, characterAngle, comp_id, addAction}) => {
     const deltaX = mouseX - spriteX;
     const deltaY = mouseY - spriteY;
     const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-    addAction({
-      type: 'POINT_TO_MOUSE',
-      payload: {
-        characterId: character.active,
-        timestamp: new Date().toISOString(),
-        message: "My point direction is " + angle + " degrees.",
-      },
-    });
+    // addAction({
+    //   type: 'POINT_TO_MOUSE',
+    //   payload: {
+    //     characterId: character.active,
+    //     timestamp: new Date().toISOString(),
+    //     message: "My point direction is " + angle + " degrees.",
+    //     property: {
+    //       transform: el.style.transform,
+    //     }
+    //   },
+    // });
     return angle;
   };
 
   // Function to get a random angle
   const getRandomAngle = () => {
     const angle = Math.floor(Math.random() * 360);
-    addAction({
-      type: 'POINT_TO_RANDOM',
-      payload: {
-        characterId: character.active,
-        timestamp: new Date().toISOString(),
-        message: "My point direction is " + angle + " degrees.",
-      },
-    });
+    const el = document.getElementById(character.active);
+    // addAction({
+    //   type: 'POINT_TO_RANDOM',
+    //   payload: {
+    //     characterId: character.active,
+    //     timestamp: new Date().toISOString(),
+    //     message: "My point direction is " + angle + " degrees.",
+    //     property: {
+    //       transform: el.style.transform,
+    //     }
+    //   },
+    // });
     return angle;
   };
 
@@ -58,6 +65,17 @@ const PointDirection = ({ character, characterAngle, comp_id, addAction}) => {
         newAngle = getRandomAngle();
       }
       el.style.transform = `rotate(${newAngle}deg)`;
+      addAction({
+        type: 'POINT_TO_DIRECTION',
+        payload: {
+          characterId: character.active,
+          timestamp: new Date().toISOString(),
+          message: "My point direction is " + angle + " degrees.",
+          property: {
+            transform: el.style.transform,
+          }
+        },
+      });
       setAngle(newAngle); // Update the state with the new angle
       characterAngle(newAngle);
     }

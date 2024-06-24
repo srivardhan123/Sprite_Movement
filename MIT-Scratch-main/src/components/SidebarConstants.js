@@ -30,5 +30,4 @@ export const looksComponents = [
   "CHANGE_COLOR",
   "LAYER",
   "NUMBERLAYER",
-  "GRAPHIC",
 ];

@@ -22,7 +22,10 @@ const GotoXY = ({ character, comp_id , addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(), 
         message: "X, Y position is " +state.goto_x + " and " + state.goto_y,
-        element: el.style,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
     });
 

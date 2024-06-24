@@ -24,7 +24,12 @@ const ChangeX = ({ character, comp_id,addAction}) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "X is changed by " + state.change_x,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+        }
       },
+
     });
   };
 

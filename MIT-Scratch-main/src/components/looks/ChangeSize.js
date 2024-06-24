@@ -26,6 +26,11 @@ const Size = ({ character, comp_id, addAction }) => {
         characterId: character.active,
         timestamp: new Date().toISOString(),
         message: "The new size scale is " + overallScale/100,
+        property: {
+          left: el.style.left,
+          top: el.style.top,
+          transform :  el.style.transform,
+        }
       },
     });
   };
