@@ -1,1 +1,5 @@
-Sprite Movement Frontend Project using React JS 
+-> Frontent Project using ReactJS, Redux and TailwindCSS.
+-> Here we are adding multiple functionalities for sprite movements such Turn, Move, Rotate, Change Size and Color, Set Direction and Wave Message etc.
+-> We are displaying the actions in logs when ever user performs any functionality.
+-> Can replay the action based on the action number entered by the user.
+-> Deployed URL : https://sprite-movement.vercel.app/
