@@ -1,4 +1,5 @@
 import { ADD_CHARACTER, SET_ANGLE } from "./actionTypes";
+
 const initialState = {
   characters: [{ id: "sprite0", angle: 0 }],
   active: "sprite0",
